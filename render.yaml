@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: radarfubar
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: ADMIN_PW
+        value: fubar
+      - key: PORT
+        value: 10000
