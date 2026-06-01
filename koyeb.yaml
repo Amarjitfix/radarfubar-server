@@ -1,0 +1,25 @@
+name: radarfubar
+service:
+  name: radarfubar-server
+  instance_type: nano
+  ports:
+    - port: 10000
+      protocol: http
+  env:
+    - key: ADMIN_PW
+      value: fubar
+    - key: PORT
+      value: "10000"
+  routes:
+    - path: /
+      port: 10000
+  scalings:
+    min: 1
+    max: 1
+  git:
+    repository: Amarjitfix/radarfubar-server
+    branch: main
+    build:
+      command: npm install
+    run:
+      command: node server.js
