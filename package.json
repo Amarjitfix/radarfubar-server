@@ -1,0 +1,13 @@
+{
+  "name": "radarfubar-server",
+  "version": "4.1.0",
+  "description": "RadarFUBAR - Servidor t\u00e1ctico para Airsoft",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.1",
+    "socket.io": "^4.8.3"
+  }
+}
